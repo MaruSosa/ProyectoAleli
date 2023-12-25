@@ -43,85 +43,111 @@
       </div>
     </nav>
    </header>
- <main class="container my-3" style="padding-top: 150px;">
-  <div class="d-flex align-items-center justify-content-between">
-    <h1>Lista de Productos</h1>
-    <button class="btn btn-primary" id="btnNuevoProducto">
-      Nuevo Producto
-    </button>
-  </div>
-  <section class="table-responsive mt-4">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">imagen</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Descripcion</th>
-          <th scope="col">Precio</th>
-          <th scope="col">Acciones</th>
-        </tr>
-      </thead>
-      <tbody  id="tablaProducto">
-      </tbody>
-    </table>
-  </section>
-</main>
-
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="administrarProducto"
-  tabindex="-1"
-  aria-labelledby="administrarProductoLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title fs-5" id="administrarProductoLabel">
-          Administrar Producto
-        </h2>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <form id="formModal">
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej: bengala" required>
-          </div>
-          <div class="mb-3">
-            <label for="descripcion" class="form-label">Descripcion</label>
-            <input type="text" id="descripcion" name="descripcion" class="form-control" placeholder="Ej: bengalas de humo" required>
-          </div>
-         <div class="mb-3">
-          <select id="miSelect" class="form-control" >
-            <option value="Globos">Globos</option>
-            <option value="Cotillon">Cotillon </option>
-            <option value="Velas">Velas/Bengalas</option>
-            <option value="Maquillajes">Maquillajes</option>
-            <option value="Banderines">Banderines</option>
-          </select>
-         </div>
-          <div class="mb-3">
-            <label for="imagen" class="form-label">Imagen</label>
-            <input type="text" id="imagen" name="imagen" class="form-control" required>
-        </div>        
-          <div class="mb-3">
-            <label for="precio" class="form-label">Precio</label>
-            <input type="number" id="precio" name="precio" class="form-control" placeholder="$" required>
-          </div>
-          <button class="btn" type="submit" id="btnCrearProducto" required>Agregar</button>
-        </form>
+   <main class="container my-5">
+    <h1 class="display-4 text-center">Administrador de productos</h1>
+    <hr />
+    <section class="mt-5">
+      <h2 class="display-6">Lista de Productos</h2>
+      <button
+          class="btn btn-outline-primary btn-sm ms-3"
+          id="btnCrearPeroducto"
+        
+        >
+          <i class="bi bi-clipboard2-plus-fill"></i>
+        </button>
+      <hr />
+      <article class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">nombre</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaproducto">
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+  <div
+    class="modal fade"
+    id="modalproducto"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Administrar Producto
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form id="formproducto">
+            <div class="mb-3">
+              <label for="id">#</label>
+              <input
+                id="id"
+                type="text"
+                class="form-control"
+                placeholder="123"
+                maxlength="5"
+                minlength="1"
+                disabled
+              />
+            </div>
+            <div class="mb-3">
+              <label for="nombre">nombre *</label>
+              <input
+                id="nombre"
+                type="text"
+                class="form-control"
+                placeholder="Ej: Robotech"
+                maxlength="60"
+                minlength="2"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="descripcion">Descripcion *</label>
+              <textarea
+                id="descripcion"
+                rows="4"
+                class="form-control"
+                placeholder="Ej: Lorem ipsum dolor sit amet."
+                maxlength="200"
+                minlength="2"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="imagen">Imagen *</label>
+              <input
+                id="imagen"
+                type="text"
+                class="form-control"
+                placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html"
+                maxlength="120"
+                minlength="2"
+              />
+            </div>
+            <div class="alert alert-danger mt-3 d-none" role="alert" id="alerta">      
+            </div>
+            <button class="btn btn-primary" type="submit" id="btnFormulario">Enviar</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
    <footer class="footer-section">
     <div class="container">
         <div class="footer-cta pt-5 pb-5">
