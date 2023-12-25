@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="mariana sosa">
+        <meta name="description" content="Proyecto de pagina de una tienda online de cotillon">
+        <meta name="keywords" content="cotillon,cumpleaños,decoracion">
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+      />
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Administración</title>
+    </head>
+<body>
+  <header class="mb-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar fixed-top">
+      <div class="container-fluid colorNav">
+        <a href="./index.html"><img src="../img/loAleliTransparente.png" alt="logo" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mt-2 mb-lg-0">
+            <li class="nav-item mt-2">
+              <a class="nav-link" aria-current="page" href="../index.html">Principal</a>
+            </li>
+            <li class="nav-item mt-2">
+              <a class="nav-link active" href="./adminitrador.html">Listado de Productos</a>
+            </li>
+            <li class="nav-item mt-2">
+              <a class="nav-link" href="./error404.html">Usuarios</a>
+            </li>
+          </ul>
+          <form class="d-flex mt-2" role="search" id="formBuscar">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+          
+      </div>
+    </nav>
+   </header>
+ <main class="container my-3" style="padding-top: 150px;">
+  <div class="d-flex align-items-center justify-content-between">
+    <h1>Lista de Productos</h1>
+    <button class="btn btn-primary" id="btnNuevoProducto">
+      Nuevo Producto
+    </button>
+  </div>
+  <section class="table-responsive mt-4">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">imagen</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody  id="tablaProducto">
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="administrarProducto"
+  tabindex="-1"
+  aria-labelledby="administrarProductoLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="administrarProductoLabel">
+          Administrar Producto
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="formModal">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej: bengala" required>
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <input type="text" id="descripcion" name="descripcion" class="form-control" placeholder="Ej: bengalas de humo" required>
+          </div>
+         <div class="mb-3">
+          <select id="miSelect" class="form-control" >
+            <option value="Globos">Globos</option>
+            <option value="Cotillon">Cotillon </option>
+            <option value="Velas">Velas/Bengalas</option>
+            <option value="Maquillajes">Maquillajes</option>
+            <option value="Banderines">Banderines</option>
+          </select>
+         </div>
+          <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="text" id="imagen" name="imagen" class="form-control" required>
+        </div>        
+          <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" id="precio" name="precio" class="form-control" placeholder="$" required>
+          </div>
+          <button class="btn" type="submit" id="btnCrearProducto" required>Agregar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+   <footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Dirección</h4>
+                            <span>Aguilares-Tucumán</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Teléfono</h4>
+                            <span>03865-11245152</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Email</h4>
+                            <span>alelicotillon@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="../img/loAleliTransparente.png" class="img-fluid" alt="logo"></a>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Medios de Comunicación</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram instagram-bg"></i></a>
+                            <a href="#"><i class="fa-brands fa-whatsapp whatsapp-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Páginas</h3>
+                        </div>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./pages/productos.html">Categorias</a></li>
+                            <li><a href="./pages/globos.html">Globos</a></li>
+                            <li><a href="./pages/banderines.html">Banderines</a></li>
+                            <li><a href="./pages/maquillajes.html">Maquillajes</a></li>
+                            <li><a href="./pages/cotillon.html">Cotillon</a></li>
+                            <li><a href="./pages/descartables.html">Descartables</a></li>
+                            <li><a href="./pages/velas.html">Velas y Bengalas</a></li>
+                            <li><a href="./pages/favoritos.html">Favoritos</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-30">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Subscribete</h3>
+                      </div>
+                      <div class="footer-text mb-25">
+                          <p style="font-size: 20px;">Subscribete y recibe los mejores descuentos!</p>
+                      </div>
+                      <div class="subscribe-form">
+                        <form action="./error404.html" id="formFooter">
+                            <input type="text" placeholder="mariana@gmail.com">
+                            <button><i class="fab fa-telegram-plane"></i></button>
+                        </form>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+       <script src="https://kit.fontawesome.com/86fe48ff47.js" crossorigin="anonymous"></script>
+       <script
+       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+       crossorigin="anonymous"
+     ></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="../js/app.js" type="module"></script>
+      </body>
+</html>
