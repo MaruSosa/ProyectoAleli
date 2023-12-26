@@ -1,7 +1,7 @@
 import Producto from './classProducto.js';
 import { resumenValidaciones } from "./validaciones.js";
 
-
+//crear
 let formularioProductos = document.getElementById("formProducto");
 let modalProducto = new bootstrap.Modal(
   document.getElementById("modalProducto")
@@ -60,23 +60,25 @@ function crearFila(Producto, fila) {
 </tr>`;
 }
 
-formularioProductos.addEventListener("submit", prepararProducto);
+formularioProductos.addEventListener("submit", prepararFormularioProducto);
 btnCrearProducto.addEventListener("click", desplegarModalProducto);
+
+function prepararFormularioProducto(e) {
+  e.preventDefault();
+  console.log("en el evento submit");
+  if (altaProducto) {
+    crearProducto();
+  } else {
+    editarProducto();
+  }
+}
 
 function desplegarModalProducto() {
   limpiarFormulario();
   altaProducto=true;
   modalProducto.show();
 }
-function prepararProducto(e) {
-    e.preventDefault();
-    console.log("en el evento submit");
-    if (altaProducto) {
-      crearProducto();
-    } else {
-        // editarProducto();
-    }
-  }
+
   
 function crearProducto() {
  
@@ -89,7 +91,7 @@ function crearProducto() {
 
     mostrarMensajeError(resumen);
     if (resumen.length === 0) {
-      // crear producto
+  
       const productoNuevo = new Producto(
         undefined,
         nombre.value,
@@ -99,14 +101,14 @@ function crearProducto() {
       );
       
       listaProductos.push(productoNuevo);
-      //guardar el array en localstorage
+
       guardarEnLocalstorage();
       console.log(productoNuevo);
-      //dibujar la fila en la tabla
+     
       crearFila(productoNuevo, listaProductos.length);
-      //mostrar un mensaje
+ 
       Swal.fire(
-        "producto creado",
+        "Producto creado",
         "El producto fue creado exitosamente",
         "success"
       );
@@ -130,4 +132,51 @@ function crearProducto() {
   
   function limpiarFormulario() {
     formularioProductos.reset();
+  }
+  //Editar
+  window.prepararProducto = (idProducto) => {
+    
+    const productoBuscado = listaProductos.find(
+      (producto) => producto.id === idProducto
+    );
+
+    id.value = productoBuscado.id;
+    nombre.value = productoBuscado.nombre;
+    descripcion.value = productoBuscado.descripcion;
+    precio.value = productoBuscado.precio;
+    imagen.value = productoBuscado.imagen;
+    modalProducto.show();
+  
+    altaProducto = false;
+  };
+  
+  function editarProducto() {
+    console.log("aqui tengo que editar");
+   
+    let posicionProducto = listaProductos.findIndex((producto)=> producto.id === id.value );
+    console.log(posicionProducto)
+    
+    listaProductos[posicionProducto].nombre = nombre.value;
+    listaProductos[posicionProducto].imagen = imagen.value;
+    listaProductos[posicionProducto].descripcion = descripcion.value;
+    listaProductos[posicionProducto].precio = precio.value;
+ 
+    guardarEnLocalstorage()
+   
+    let tablaProducto = document.getElementById("tablaProducto");
+    console.log(tablaProducto.children[posicionProducto].children[1])
+ 
+    tablaProducto.children[posicionProducto].children[1].innerHTML = nombre.value
+    tablaProducto.children[posicionProducto].children[2].children[0].innerHTML = descripcion.value
+    tablaProducto.children[posicionProducto].children[3].children[0].innerHTML = imagen.value
+    tablaProducto.children[posicionProducto].children[4].innerHTML = precio.value
+  
+    Swal.fire(
+      "Producto modificado",
+      "El producto fue modificado exitosamente",
+      "success"
+    );
+   
+    limpiarFormulario();
+    modalProducto.hide();
   }

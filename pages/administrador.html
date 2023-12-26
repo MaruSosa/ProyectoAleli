@@ -49,7 +49,7 @@
    </header>
    <main class="container my-5">
     <h1 class="display-4 text-center">Administrador de productos</h1>
-    <hr />
+    <hr>
     <section class="mt-5">
       <h2 class="display-6">Lista de Productos</h2>
       <button
@@ -114,6 +114,7 @@
                 class="form-control"
                 maxlength="20"
                 minlength="3"
+                required
               />
             </div>
             <div class="mb-3">
@@ -124,20 +125,21 @@
                 class="form-control"
                 maxlength="100"
                 minlength="5"
+                required
               ></textarea>
             </div>
             <div class="mb-3">
               <label for="precio">Precio *</label>
-              <textarea
+              <input
                 id="precio"
                 rows="4"
                 class="form-control"
                 placeholder="$"
                 maxlength="10"
                 minlength="2"
-                type="number"
-              ></textarea>
-            </div>
+                type="number" required
+              ></input>
+            </div>            
             <div class="mb-3">
               <label for="imagen">Imagen *</label>
               <input
@@ -147,6 +149,7 @@
                 placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html"
                 maxlength="120"
                 minlength="2"
+                required
               />
             </div>
             <div class="alert alert-danger mt-3 d-none" role="alert" id="alerta">      
@@ -254,9 +257,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
-    <script src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
-"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
      <script src="../js/administrador.js" type="module"></script>
       </body>
 </html>
