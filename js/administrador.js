@@ -180,3 +180,40 @@ function crearProducto() {
     limpiarFormulario();
     modalProducto.hide();
   }
+  //borrar Productos
+  window.borrarProducto = (id) => {
+    Swal.fire({
+      title: "¿Esta seguro de borrar el Producto?",
+      text: "No puedes volver atras luego de borrar unProducto",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#0079FF",
+      cancelButtonColor: "#FF0060",
+      confirmButtonText: "Borrar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+       
+        console.log(id);
+        
+        let posicionProducto = listaProductos.findIndex(
+          (producto) => producto.id === id
+        );
+        
+        listaProductos.splice(posicionProducto, 1);
+      
+        guardarEnLocalstorage();
+        
+        let tablaProducto = document.getElementById("tablaProducto");
+        tablaProducto.removeChild(tablaProducto.children[posicionProducto]);
+      
+        Swal.fire(
+          "Producto eliminado",
+          "El Producto seleccionado fue borrado correctamente",
+          "success"
+        );
+        
+      }
+    });
+  };
