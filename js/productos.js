@@ -10,11 +10,11 @@ function crearColumna(producto) {
   grilla.innerHTML += `
     <aside class="col-12 col-md-4 col-lg-3 mb-3">
     <div class="card h-100" >
-      <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+      <img src="${producto.imagen}" class="card-img-top imagenProducto" alt="${producto.nombre}">
       <div class="card-body">
-        <h5 class="card-title">${producto.nombre}</h5>
+        <h5 class="card-title tituloCardProducto">${producto.nombre}</h5>
       </div>
-      <div class='card-footer'>
+      <div class='card-footer d-flex justify-content-center'>
       <a class="btn btn-primary" href='../pages/detalle.html'>ver detalle</a>
       </div>
     </div>
