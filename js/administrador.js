@@ -154,7 +154,6 @@ function crearProducto() {
     const idProducto = id.value;
     const posicionProducto = listaProductos.findIndex((producto) => producto.id === idProducto);
   
-<<<<<<< HEAD
     if (posicionProducto !== -1) {
       listaProductos[posicionProducto].nombre = nombre.value;
       listaProductos[posicionProducto].imagen = imagen.value;
@@ -181,7 +180,7 @@ function crearProducto() {
       console.error('Producto no encontrado en la lista');
     }
   }
-=======
+
     Swal.fire(
       "Producto modificado",
       "El producto fue modificado exitosamente",
@@ -190,7 +189,6 @@ function crearProducto() {
    
     limpiarFormulario();
     modalProducto.hide();
-  }
   //borrar Productos
   window.borrarProducto = (id) => {
     Swal.fire({
@@ -228,4 +226,4 @@ function crearProducto() {
       }
     });
   };
->>>>>>> borrarProductos
+
