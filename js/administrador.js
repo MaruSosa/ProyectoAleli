@@ -135,48 +135,48 @@ function crearProducto() {
   }
   //Editar
   window.prepararProducto = (idProducto) => {
-    
-    const productoBuscado = listaProductos.find(
-      (producto) => producto.id === idProducto
-    );
-
-    id.value = productoBuscado.id;
-    nombre.value = productoBuscado.nombre;
-    descripcion.value = productoBuscado.descripcion;
-    precio.value = productoBuscado.precio;
-    imagen.value = productoBuscado.imagen;
-    modalProducto.show();
+    const productoBuscado = listaProductos.find((producto) => producto.id === idProducto);
   
-    altaProducto = false;
+    if (productoBuscado) {
+      id.value = productoBuscado.id;
+      nombre.value = productoBuscado.nombre;
+      descripcion.value = productoBuscado.descripcion;
+      precio.value = productoBuscado.precio;
+      imagen.value = productoBuscado.imagen;
+      modalProducto.show();
+      altaProducto = false;
+    } else {
+      console.error('Producto no encontrado');
+    }
   };
   
   function editarProducto() {
-    console.log("aqui tengo que editar");
-   
-    let posicionProducto = listaProductos.findIndex((producto)=> producto.id === id.value );
-    console.log(posicionProducto)
-    
-    listaProductos[posicionProducto].nombre = nombre.value;
-    listaProductos[posicionProducto].imagen = imagen.value;
-    listaProductos[posicionProducto].descripcion = descripcion.value;
-    listaProductos[posicionProducto].precio = precio.value;
- 
-    guardarEnLocalstorage()
-   
-    let tablaProducto = document.getElementById("tablaProducto");
-    console.log(tablaProducto.children[posicionProducto].children[1])
- 
-    tablaProducto.children[posicionProducto].children[1].innerHTML = nombre.value
-    tablaProducto.children[posicionProducto].children[2].children[0].innerHTML = descripcion.value
-    tablaProducto.children[posicionProducto].children[3].children[0].innerHTML = imagen.value
-    tablaProducto.children[posicionProducto].children[4].innerHTML = precio.value
+    const idProducto = id.value;
+    const posicionProducto = listaProductos.findIndex((producto) => producto.id === idProducto);
   
-    Swal.fire(
-      "Producto modificado",
-      "El producto fue modificado exitosamente",
-      "success"
-    );
-   
-    limpiarFormulario();
-    modalProducto.hide();
+    if (posicionProducto !== -1) {
+      listaProductos[posicionProducto].nombre = nombre.value;
+      listaProductos[posicionProducto].imagen = imagen.value;
+      listaProductos[posicionProducto].descripcion = descripcion.value;
+      listaProductos[posicionProducto].precio = precio.value;
+  
+      guardarEnLocalstorage();
+  
+      let tablaProducto = document.getElementById('tablaProducto');
+      tablaProducto.children[posicionProducto].children[1].innerHTML = nombre.value;
+      tablaProducto.children[posicionProducto].children[2].children[0].innerHTML = descripcion.value;
+      tablaProducto.children[posicionProducto].children[3].children[0].innerHTML = imagen.value;
+      tablaProducto.children[posicionProducto].children[4].innerHTML = precio.value;
+  
+      Swal.fire(
+        'Producto modificado',
+        'El producto fue modificado exitosamente',
+        'success'
+      );
+  
+      limpiarFormulario();
+      modalProducto.hide();
+    } else {
+      console.error('Producto no encontrado en la lista');
+    }
   }
