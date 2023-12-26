@@ -1,4 +1,4 @@
-import Producto from "./classProducto.js";
+import Producto from './classProducto.js';
 import { resumenValidaciones } from "./validaciones.js";
 
 
@@ -6,7 +6,7 @@ let formularioProductos = document.getElementById("formProducto");
 let modalProducto = new bootstrap.Modal(
   document.getElementById("modalProducto")
 );
-const btnCrearProducto = document.querySelector("#btnCrearPelicula");
+const btnCrearProducto = document.querySelector("#btnCrearProducto");
 const id = document.getElementById("id"),
   nombre = document.getElementById("nombre"),
   descripcion = document.getElementById("descripcion"),
@@ -16,17 +16,15 @@ const id = document.getElementById("id"),
 let altaProducto = true; 
 
 let listaProductos = JSON.parse(localStorage.getItem("listaProductos")) || [];
-
-
 if (listaProductos.length > 0) {
   listaProductos = listaProductos.map(
-    (Producto) =>
+    (producto) =>
       new Producto(
-        Producto.id,
-        Producto.nombre,
-        Producto.descripcion,
-        Producto.imagen,
-        Producto.precio,
+        producto.id,
+        producto.nombre,
+        producto.descripcion,
+        producto.imagen,
+        producto.precio,
       )
   );
 }
@@ -62,7 +60,7 @@ function crearFila(Producto, fila) {
 </tr>`;
 }
 
-formularioProductos.addEventListener("submit", prepararFormularioProducto);
+formularioProductos.addEventListener("submit", prepararProducto);
 btnCrearProducto.addEventListener("click", desplegarModalProducto);
 
 function desplegarModalProducto() {
@@ -70,13 +68,13 @@ function desplegarModalProducto() {
   altaProducto=true;
   modalProducto.show();
 }
-function prepararFormularioProducto(e) {
+function prepararProducto(e) {
     e.preventDefault();
     console.log("en el evento submit");
     if (altaProducto) {
       crearProducto();
     } else {
-    //   editarProducto();
+        // editarProducto();
     }
   }
   
