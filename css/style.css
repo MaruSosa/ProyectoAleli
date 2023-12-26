@@ -790,3 +790,7 @@ color:#0079FF;
 .btnCategorias:hover{
   background-color: #FF0060;
 }
+#imagenDetalle{
+  width: 300px;
+  height: auto;
+}

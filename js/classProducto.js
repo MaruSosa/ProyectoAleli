@@ -5,7 +5,7 @@ export default class Producto {
     #imagen;
     #precio;
   
-    constructor(id, nombre, descripcion, imagen, precio) {
+    constructor(id = uuidv4(), nombre, descripcion, imagen, precio) {
       this.#id = id;
       this.#nombre = nombre;
       this.#descripcion = descripcion;
