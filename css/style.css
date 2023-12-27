@@ -145,19 +145,17 @@ h4{
 .botonReg:hover{
   background-color:#FF0060;
 }
+/*estilos card productos*/
 .card{
   height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .card-img-top{
-  width: 50%; 
-  height: 50%;
-  margin: 0 auto; 
-  display: block;
+  width: 100%; 
   height: 200px; 
   object-fit: cover;
-  border-radius: 60%;
-  margin-top: 10px;
-  border: 2px solid #FF0060;
 }
 
 /*estilos nosotros*/
@@ -273,59 +271,6 @@ h2{
 .iconoEstilo li:hover:after {
   opacity: 1;
   animation: rotar 10s linear infinite;
-}
-/*estilos pagina globos*/
-.contenedorGlobos .card {
-  position: relative;
-  max-width: 300px;
-  height: 215px;
-  background: #fff;
-  margin: 30px 10px;
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 5px 202px rgba(0,0,0, 0.5);
-  transition: 0.3s ease-in-out;
-}
-
-.contenedorGlobos .card:hover {
-  height: 400px;
-}
-
-.contenedorGlobos .card .imgBx {
-  position: relative;
-  width: 260px;
-  height: 260px;
-  top: -60px;
-  left: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
-  z-index: 1;
-  border-radius: 8px;
-}
-
-.contenedorGlobos .card .imgBx img {
-  width: 100%;
-  max-height: 260px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.contenedorGlobos .card .content {
-  position: relative;
-  margin-top: -140px;
-  padding: 10px 15px;
-  text-align: center;
-  color: #111;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-}
-
-.contenedorGlobos .card:hover .content {
-  visibility: visible;
-  opacity: 1;
-  margin-top: -40px;
-  transition-delay: 0.5s;
 }
 /*estilos pagina de globos*/
 *{
@@ -504,15 +449,6 @@ h2{
   font-size:13px;
   font-weight:600
 }
-#colorGlobologia{
-  font-size: 40px;
-  color:#00DFA2;
-  background-color: #0079FF;
-}
-.colorTitulo{
-  font-size: 40px;
-  color:#00DFA2;
-}
 .product-content h3.title a{
   font-size: 24px; 
   color: #FF0060;
@@ -524,56 +460,6 @@ h2{
   .product-grid{
       margin-bottom:30px
   }
-}
-/*estilos papelitos*/
-@keyframes confetti-slow {
-  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
-  100% { transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg); }
-}
-
-@keyframes confetti-medium {
-  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
-  100% { transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg); }
-}
-
-@keyframes confetti-fast {
-  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
-  100% { transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg); }
-}
-
-.contenedorPapelito {
-  width: 100vw;
-  height: 100vh;
-  background: white;
-  display: flex;
-}
-
-.confetti-container {
-  perspective: 700px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.confetti {
-  position: absolute;
-  z-index: 1;
-  top: -10px;
-  border-radius: 0%;
-}
-.confetti--animation-slow {
-  animation: confetti-slow 4s linear 1 forwards;
-}
-
-.confetti--animation-medium {
-  animation: confetti-medium 3s linear 1 forwards;
-}
-
-.confetti--animation-fast {
-  animation: confetti-fast 2s linear 1 forwards;
 }
 /*estilo footer*/
 ul {
@@ -730,66 +616,19 @@ color: #FF0060;
 font-size: 14px;
 color:#0079FF;
 }
-/*estilo detalle de globo luminoso*/
-.detalleGloboLuminoso ul li{
-  font-size: 20px;
+
+/*estilos slider Principal*/
+.carousel-item{
+  width: 100%;
+  height: 500px;
 }
-.inputCantidad{
-  font-size: 20px;
-  width: 50px;
-  display: flex;
-  border-radius: 50%;
-}
-#imgGl{
-  width: 350px;
-  height: auto;
-}
-.btnDetalle {
-  background-color:#FF0060;
-  border-radius: 50px; 
-  padding: 10px 20px; 
-  color: #fff;
-  border: none; 
-  font-size: 20px;
-}
-.flechaVolver{
-  font-size: 30px;
-  padding: 10px;
-  color:#FF0060;
-  border: 3px solid #FF0060;
-  border-radius: 50%;
-}
-.imgbanderin{
-  max-height: 850px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#imgPeluca{
-  height: 350px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#imgCoti{
-  height: 350px;
-  width: auto;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/*estilos boton categorias del modal para crear editar producto*/
-.subtitulo{
-  font-size: 20px;
-}
-.tituloImagenPrincipal{
-  color: #F6FA70;
-}
-.imagenPrincipal{
-  max-width: 100%;
-  height: auto;
+.elementor-widget-image{text-align:center}
+.elementor-widget-image a{display:inline-block}
+.elementor-widget-image a img[src$=".svg"]{width:48px}
+.elementor-widget-image img{vertical-align:middle;display:inline-block}
+
+@media (max-width: 575.98px) { 
+  .elementor-widget-container{
+    display: none;
+  }
 }
