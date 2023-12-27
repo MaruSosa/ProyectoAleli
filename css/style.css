@@ -783,21 +783,13 @@ color:#0079FF;
   background-size: cover;
 }
 /*estilos boton categorias del modal para crear editar producto*/
-.btnCategorias{
-  background-color: #0079FF;
-  color:#e1e3e4;
+.subtitulo{
+  font-size: 20px;
 }
-.btnCategorias:hover{
-  background-color: #FF0060;
+.tituloImagenPrincipal{
+  color: #F6FA70;
 }
-.tituloProductos{
-  color: #FF0060;
-
-}
-.imagenProducto{
-  width: 200px;
-}
-.tituloCardProducto{
-  display: flex;
-  justify-content: center;
+.imagenPrincipal{
+  max-width: 100%;
+  height: auto;
 }
