@@ -628,7 +628,15 @@ color:#0079FF;
 .elementor-widget-image img{vertical-align:middle;display:inline-block}
 
 @media (max-width: 575.98px) { 
-  .elementor-widget-container{
+  .elementor-widget-container a{
     display: none;
   }
+  .carousel-item img{
+    width: 100px;
+    height: 460px;
+  }
+  .carousel-item p{
+    font-size: 20px;
+  }
 }
+
