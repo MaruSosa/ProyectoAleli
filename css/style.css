@@ -736,7 +736,23 @@ color:#0079FF;
 .categorias .card:hover .face.face2 h2{
   font-size: 2em;
 }
-
+/*papelitos*/
+.star {
+  transform-style: preserve-3d;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  color: red;
+}
+.star:before {
+  position: absolute;
+  content: '\2726';
+  color: inherit;
+  inset: 0;
+  box-shadow: 0 0 1em .5em #a3c2;
+  filter: drop-shadow(0 0 .5em white);
+  text-shadow: 0 0 .8em #fff5;
+}
 @media (max-width: 575.98px) { 
   .elementor-widget-container a{
     display: none;
