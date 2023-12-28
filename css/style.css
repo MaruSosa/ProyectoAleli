@@ -646,7 +646,7 @@ color:#0079FF;
 
 .categorias .card{
   position: relative;
-  width: 350px;
+  width: 250px;
   height: 350px;
   margin: 0 auto;
   background: #fff;
@@ -749,10 +749,18 @@ color:#0079FF;
     font-size: 20px;
   }
   .contenedorOpiniones {
-    width: 10cm; 
+    width: 6cm; 
     height: 8,5cm; 
     margin: 0 auto; 
     margin-bottom: 10px;
+  }
+  .categorias{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -762,5 +770,5 @@ color:#0079FF;
   }
   .sliderPrincipal img{
     height: 800px;
-  }
+  }  
 }
