@@ -112,7 +112,7 @@ background-color: var(--main-color);
 }
 h4{
   font-family: 'Acme', sans-serif;
-  color: #0079FF;
+  color: #FF0060
 }
 /*estilo login*/
 .botonLogin{
@@ -159,120 +159,6 @@ h4{
   object-fit: cover;
 }
 
-/*estilos nosotros*/
-h2{
-  font-size: 50px;
-  color: #FF0060;
-}
-.textoNosotros p{
-  font-size: 23px;
-  color: #0079FF;
-  background-color: #F6FA70;
-}
-.fotoPerfil{
-  border-radius: 50%;
-  width: 250px;
-  height: auto;
-  border: 1px solid #00DFA2;
-}
-.descripcionPerfil p{
-  font-size: 22px;
-}
-.descripcionPerfil h5{
-  font-size: 30px;
-  color: #0079FF;
-}
-.descripcionPerfil{
-  color: #FF0060;
-}
-.comunicacion{
-  font-size: 40px;
-}
-.iconoface, .iconoWha, .iconoInstagram{
-  font-size: 50px;
-  margin: 20px;
-}
-.iconoface{
-  color: #0079FF;
-}
-.iconoEstilo ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.iconoEstilo ul li {
-  list-style: none;
-  width: 120px;
-  height: 120px;
-  margin: 0 20px;
-  border: 2px solid #FF0060;
-  border-radius: 50%;
-  transition: all 0.5s;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.iconoEstilo ul li i {
-  font-size: 48px;
-  color: #00DFA2;
-  transition: all 0.5s;
-}
-
-.iconoEstilo ul li:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:  #F6FA70;
-  border-radius: 50%;
-  z-index: -1;
-  transition: all 0.5s;
-  opacity: 0;
-}
-
-.iconoEstilo ul li:hover:before {
-  opacity: 1;
-  transform: scale(0.8);
-}
-
-.iconoEstilo ul li:hover i {
-  color: #00DFA2;
-}
-
-.iconoEstilo ul li:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  border-radius: 50%;
-  z-index: -1;
-  transition: all 0.5s;
-  opacity: 0;
-  border: 2px dashed #0079FF;
-  box-sizing: border-box;
-}
-
-@keyframes rotar {
-  0% {
-    transform: scale(0.92) rotate(0deg);
-  }
-  100% {
-    transform: scale(0.92) rotate(360deg);
-  }
-}
-
-.iconoEstilo li:hover:after {
-  opacity: 1;
-  animation: rotar 10s linear infinite;
-}
 /*estilos pagina de globos*/
 *{
   margin:0;
@@ -753,32 +639,7 @@ color:#0079FF;
   filter: drop-shadow(0 0 .5em white);
   text-shadow: 0 0 .8em #fff5;
 }
-@media (max-width: 575.98px) { 
-  .elementor-widget-container a{
-    display: none;
-  }
-  .carousel-item img{
-    width: 100px;
-    height: 460px;
-  }
-  .carousel-item p{
-    font-size: 20px;
-  }
-  .contenedorOpiniones {
-    width: 6cm; 
-    height: 8,5cm; 
-    margin: 0 auto; 
-    margin-bottom: 10px;
-  }
-  .categorias{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 /*estilos login*/
 section{
   display:flex;
@@ -850,6 +711,191 @@ section p a{
   color: #FF0060;
 }
 
+/*----------ESTILOS NOSOTROS--------*/
+h2{
+  font-size: 50px;
+  color: #FF0060;
+}
+.textoNosotros p{
+  font-size: 23px;
+  color: #0079FF;
+  background-color: #F6FA70;
+}
+.fotoPerfil{
+  border-radius: 50%;
+  width: 280px;
+  height: auto;
+  border: 3px solid #00DFA2;
+}
+.descripcionPerfil p{
+  font-size: 22px;
+}
+.descripcionPerfil h5{
+  font-size: 30px;
+  color: #F6FA70;
+}
+.descripcionPerfil{
+  color: #FF0060;
+}
+.comunicacion{
+  font-size: 40px;
+}
+.iconoface, .iconoWha, .iconoInstagram{
+  font-size: 50px;
+  margin: 20px;
+}
+.iconoface{
+  color: #0079FF;
+}
+.iconoEstilo ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.iconoEstilo ul li {
+  list-style: none;
+  width: 120px;
+  height: 120px;
+  margin: 0 20px;
+  border: 2px solid #FF0060;
+  border-radius: 50%;
+  transition: all 0.5s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconoEstilo ul li i {
+  font-size: 48px;
+  color: #00DFA2;
+  transition: all 0.5s;
+}
+
+.iconoEstilo ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:  #F6FA70;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.iconoEstilo ul li:hover:before {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+.iconoEstilo ul li:hover i {
+  color: #00DFA2;
+}
+
+.iconoEstilo ul li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s;
+  opacity: 0;
+  border: 2px dashed #0079FF;
+  box-sizing: border-box;
+}
+
+@keyframes rotar {
+  0% {
+    transform: scale(0.92) rotate(0deg);
+  }
+  100% {
+    transform: scale(0.92) rotate(360deg);
+  }
+}
+
+.iconoEstilo li:hover:after {
+  opacity: 1;
+  animation: rotar 10s linear infinite;
+}
+.quienesSomos h1{
+  color: #FF0060;
+}
+.claseLogo img{
+  width: 500px;
+  height: auto;
+}
+
+p {
+ font-size: 1.2em;
+ padding: 0em 2em;
+}
+.quienesSomos {
+  padding: 20px;
+}
+.hideText {
+  display: none;
+}
+.read-more-btn {
+  background-color: #ff0060;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  padding: 15px 32px;
+  font-size: 1.2em;
+  box-shadow: 0px 0px 10px 0px;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  box-shadow: none;
+  background-color: #F6FA70;
+  color: #fff;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3.05s;
+} 
+.hideText {
+  display: none;
+}
+
+.showText {
+  display: block;
+}
+/*-----------------MEDIA QUERY-----------*/
+@media (max-width: 575.98px) { 
+  .elementor-widget-container a{
+    display: none;
+  }
+  .carousel-item img{
+    width: 100px;
+    height: 460px;
+  }
+  .carousel-item p{
+    font-size: 20px;
+  }
+  .contenedorOpiniones {
+    width: 6cm; 
+    height: 8,5cm; 
+    margin: 0 auto; 
+    margin-bottom: 10px;
+  }
+  .categorias{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
 @media (max-width: 768px) { 
   .elementor-widget-container a{
     display: none;
@@ -857,4 +903,14 @@ section p a{
   .sliderPrincipal img{
     height: 800px;
   }  
+  main{
+    flex-grow: 1;
+    padding-top: 195px;
+    width: 100%;
+  }
+  .claseLogo img{
+    width: 500px;
+    height: auto;
+    display: none;
+  }
 }
