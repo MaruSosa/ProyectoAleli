@@ -29,7 +29,7 @@
                   <a class="nav-link" aria-current="page" href="../index.html">Principal</a>
                 </li>
                 <li class="nav-item mt-2">
-                  <a class="nav-link active" href="./productos.html">Productos</a>
+                  <a class="nav-link" href="./productos.html">Productos</a>
                 </li>
               </ul>
               <form class="d-flex mt-2" role="search" id="formBuscar">
@@ -40,18 +40,114 @@
           </div>
         </nav>
        </header>
-    <section class="my-2 py-2 pt-5">
+   <main class="d-flex justify-content-center align-items-center text-center">
+    <section>
+      <div class="mt-5 pt-5">
         <h2>Iniciar Sesión</h2>
-        <form id="loginForm">
-            <label>Mail</label>
-            <input type="email" placeholder="mariana@gmail.com" id="email" required autofocus>
-            <label>Contraseña</label>
-            <input type="password" placeholder="" id="password" required>
-            <input type="submit" value="Ingresar">
-        </form>
-        <p>No tienes una cuenta? <a href="./registro.html">Registro</a></p>
-        <a style="color: black;font-size: 20px;" href="./error404.html">Olvidaste tu contraseña?</a>
-    </section>
+      <form id="loginForm" >
+          <label style="font-size: 20px;">Correo Electronico</label>
+          <input type="email" placeholder="mariana@gmail.com" id="email" required autofocus>
+          <label style="font-size: 20px;">Contraseña</label>
+          <input type="password" placeholder="" id="password" required>
+          <input type="submit" value="Ingresar">
+      </form>
+     <div class="d-flex flex-column">
+      <p>No tienes una cuenta? <a href="./registro.html">Registro</a></p>
+      <a style="color: black;font-size: 20px;" href="./error404.html">Olvidaste tu contraseña?</a>
+     </div>
+      </div>
+  </section>
+   </main>
+   <footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Dirección</h4>
+                            <span>Aguilares-Tucumán</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Teléfono</h4>
+                            <span>03865-11245152</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Email</h4>
+                            <span>alelicotillon@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="../img/loAleliTransparente.png" class="img-fluid" alt="logo"></a>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Medios de Comunicación</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram instagram-bg"></i></a>
+                            <a href="#"><i class="fa-brands fa-whatsapp whatsapp-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Páginas</h3>
+                        </div>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./pages/error404">Categorias</a></li>
+                            <li><a href="./pages/error404">Globos</a></li>
+                            <li><a href="./pages/error404">Banderines</a></li>
+                            <li><a href="./pages/error404">Maquillajes</a></li>
+                            <li><a href="./pages/error404">Cotillon</a></li>
+                            <li><a href="./pages/error404">Descartables</a></li>
+                            <li><a href="./pages/error404">Velas y Bengalas</a></li>
+                            <li><a href="./pages/error404">Favoritos</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-30">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Subscribete</h3>
+                      </div>
+                      <div class="footer-text mb-25">
+                          <p style="font-size: 20px;">Subscribete y recibe los mejores descuentos!</p>
+                      </div>
+                      <div class="subscribe-form">
+                        <form action="./error404.html" id="formFooter">
+                            <input type="text" placeholder="mariana@gmail.com">
+                            <button><i class="fab fa-telegram-plane"></i></button>
+                        </form>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+            </div>
+        </div>
+    </div>
+  </footer>
     <script src="../js/login.js"></script>
 </body>
 </html>
