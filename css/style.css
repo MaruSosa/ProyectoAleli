@@ -9,6 +9,7 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to right,#00DFA2,#0079FF);
 }
 main{
   flex-grow: 1;
@@ -627,6 +628,115 @@ color:#0079FF;
 .elementor-widget-image a img[src$=".svg"]{width:48px}
 .elementor-widget-image img{vertical-align:middle;display:inline-block}
 
+.colorEstrella{
+  color: goldenrod;
+}
+.contenedorOpiniones {
+  width: 8cm; 
+  height: auto; 
+  margin: 0 auto; 
+}
+/*estilo contenedor destacados*/
+.categorias{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin: 0 auto;
+}
+
+.categorias .card{
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 15px 60px rgba(0,0,0, .5);
+  border-radius: 15px;
+}
+
+.categorias .card .face{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categorias .card .face.face1{
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.categorias .card .face.face1 h2{
+  margin: 0;
+  padding: 0;
+}
+
+.categorias .card .face.face1 .content{
+  font-size:1.2em;
+  margin:0;
+  padding:0 0 1em 0;
+  font-weight:500;
+}
+
+.categorias .card .face.face2{
+  background: #111;
+  transition: 0.5s;
+}
+
+.categorias .card:nth-child(1) .face.face2{
+  background-image: url('../img/globos/kitArgentina.png');
+  background-size: cover;
+  background-position: center; 
+  border-radius: 15px;
+}
+
+.categorias .card:nth-child(2) .face.face2{
+  background-image: url('../img/cotillon/pelucas.png');
+  background-size: cover;
+  background-position: center; 
+  border-radius: 15px;
+}
+
+.categorias .card:nth-child(3) .face.face2{
+  background-image: url('../img/maquillajes/maquillaje3.png');
+  background-size: cover;
+  background-position: center; 
+  border-radius: 15px;
+}
+
+.categorias .card:hover .face.face2{
+  height: 60px;
+  border-radius: 0 0 15px 15px;
+}
+
+.categorias .card .face.face2:before{
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255, 0.1);
+  border-radius: 15px 0 0 15px;
+}
+
+.categorias .card .face.face2 h2{
+  margin: 0;
+  padding: 0;
+  font-size: 10em;
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0,0,0, .2);
+}
+
+.categorias .card:hover .face.face2 h2{
+  font-size: 2em;
+}
+
 @media (max-width: 575.98px) { 
   .elementor-widget-container a{
     display: none;
@@ -638,5 +748,19 @@ color:#0079FF;
   .carousel-item p{
     font-size: 20px;
   }
+  .contenedorOpiniones {
+    width: 10cm; 
+    height: 8,5cm; 
+    margin: 0 auto; 
+    margin-bottom: 10px;
+  }
 }
 
+@media (max-width: 768px) { 
+  .elementor-widget-container a{
+    display: none;
+  }
+  .sliderPrincipal img{
+    height: 800px;
+  }
+}
