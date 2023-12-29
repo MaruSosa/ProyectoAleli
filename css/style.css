@@ -343,11 +343,7 @@ h4{
 .product-content .price {
   font-size: 24px; 
 }
-@media only screen and (max-width:990px){
-  .product-grid{
-      margin-bottom:30px
-  }
-}
+
 /*estilo footer*/
 ul {
   margin: 0px;
@@ -867,6 +863,11 @@ p {
 .showText {
   display: block;
 }
+/*-------------ESTILOS PAGINA DETALLE*/
+#imagenDetalle{
+  width: 300px;
+  height: auto;
+}
 /*-----------------MEDIA QUERY-----------*/
 @media (max-width: 575.98px) { 
   .elementor-widget-container a{
@@ -917,5 +918,10 @@ p {
     width: 500px;
     height: auto;
     display: none;
+  }
+}
+@media only screen and (max-width:990px){
+  .product-grid{
+      margin-bottom:30px
   }
 }

@@ -225,5 +225,5 @@ function crearProducto() {
   window.verDetalleProducto = (idProducto) => {
     console.log(window.location);
     window.location.href =
-      window.location.origin + "/pages/detalle.html?id=" + idProducto;
+      window.location.origin + "/pages/detalle.html" + idProducto;
   };
