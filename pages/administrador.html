@@ -47,15 +47,17 @@
       </div>
     </nav>
    </header>
-   <main class="container my-5">
-    <h1 class="display-4 text-center">Administrador de productos</h1>
+   <main class="container">
+   <div class="container py-lg-5 my-lg-5">
+    <h3 style="font-size: 35px;color: #FF0060;" class=" text-center pt-lg-5">Administración</h3>
     <hr>
-    <section class="mt-5">
-      <h2 class="display-6">Lista de Productos</h2>
+    <div class="mt-5">
+      <h3 style="font-size: 35px;color: #FF0060;" class="text-center">Tabla de Productos</h3>
       <button
-          class="btn btn-outline-primary btn-sm ms-3"
+          class="btn btn-outline-primary btn-sm ms-3" style="background-color: #FF0060;color: white;font-size: 20px;"
           id="btnCrearProducto">Nuevo Producto</button>
       <hr />
+   </div>
       <article class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -64,6 +66,7 @@
               <th scope="col">nombre</th>
               <th scope="col">Descripcion</th>
               <th scope="col">Imagen</th>
+              <th scope="col">Precio</th>
               <th scope="col">Acciones</th>
             </tr>
           </thead>
@@ -71,7 +74,7 @@
           </tbody>
         </table>
       </article>
-    </section>
+    </div>
   </main>
   <div
     class="modal fade"

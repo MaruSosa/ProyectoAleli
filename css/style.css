@@ -893,6 +893,11 @@ p {
     display: flex;
     flex-direction: column;
   }
+    main{
+    flex-grow: 1;
+    padding-top: 195px;
+    width: 100%;
+  }
 }
 
 
