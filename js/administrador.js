@@ -50,6 +50,9 @@ function crearFila(Producto, fila) {
   <td><span class="my-class text-truncate">${Producto.imagen}</span></td>
   <td>${Producto.precio}</td>
   <td>
+    <button class="btn btn-primary" onclick="verDetalleProducto('${Producto.id}')">
+      <i class="bi bi-eye"></i>
+    </button>
     <button class="btn btn-warning" onclick="prepararProducto('${Producto.id}')">
       <i class="bi bi-pencil-square"></i>
     </button>
@@ -179,16 +182,9 @@ function crearProducto() {
     } else {
       console.error('Producto no encontrado en la lista');
     }
-  }
-
-    Swal.fire(
-      "Producto modificado",
-      "El producto fue modificado exitosamente",
-      "success"
-    );
-   
     limpiarFormulario();
     modalProducto.hide();
+    }
   //borrar Productos
   window.borrarProducto = (id) => {
     Swal.fire({
@@ -226,4 +222,8 @@ function crearProducto() {
       }
     });
   };
-
+  window.verDetalleProducto = (idProducto) => {
+    console.log(window.location);
+    window.location.href =
+      window.location.origin + "/pages/detalle.html?id=" + idProducto;
+  };
