@@ -868,54 +868,27 @@ p {
   width: 300px;
   height: auto;
 }
-/*-----------------MEDIA QUERY-----------*/
-@media (max-width: 575.98px) { 
-  .elementor-widget-container a{
-    display: none;
-  }
-  .carousel-item img{
-    width: 100px;
-    height: 460px;
-  }
-  .carousel-item p{
-    font-size: 20px;
-  }
-  .contenedorOpiniones {
-    width: 6cm; 
-    height: 8,5cm; 
-    margin: 0 auto; 
-    margin-bottom: 10px;
-  }
-  .categorias{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-    main{
-    flex-grow: 1;
-    padding-top: 195px;
-    width: 100%;
-  }
-}
 
 /*error 404*/
+.btnInicio{
+  border-radius: 50%;
+  font-size: 30px;
+  background-color:#F6FA70;
+}
 #logo {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 4.8em; /* Reducí el tamaño de la fuente para adaptarse mejor */
+  font-size: 4.8em; 
   letter-spacing: 0em;
   line-height: 1em;
   margin: 0 auto;
-  width: 80%; /* Usamos porcentaje en lugar de un valor fijo */
-  max-width: 400px; /* Establecemos un ancho máximo para evitar que sea demasiado grande */
+  width: 80%; 
+  max-width: 400px; 
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Reemplaza el uso de margin para centrar vertical y horizontalmente */
+  transform: translate(-50%, -50%); 
   pointer-events: none;
   cursor: default;
 }
@@ -957,6 +930,38 @@ p {
 	0% { color: #06D6A0; }
   50% { color: #8050FF; }
   100% { color: #FF6978; }
+}
+/*-----------------MEDIA QUERY-----------*/
+@media (max-width: 575.98px) { 
+  .elementor-widget-container a{
+    display: none;
+  }
+  .carousel-item img{
+    width: 100px;
+    height: 460px;
+  }
+  .carousel-item p{
+    font-size: 20px;
+  }
+  .contenedorOpiniones {
+    width: 6cm; 
+    height: 8,5cm; 
+    margin: 0 auto; 
+    margin-bottom: 10px;
+  }
+  .categorias{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+    main{
+    flex-grow: 1;
+    padding-top: 195px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) { 
